@@ -1,0 +1,125 @@
+\hypertarget{classgame}{\section{game Class Reference}
+\label{classgame}\index{game@{game}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classgame_aa3eafc5948bf2ac3c082e0efd47e1876}{check\-And\-Move\-Piece} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classgame_afa8e7c21f9945b052f83b80eb9e87149}{move\-Piece} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static void \hyperlink{classgame_a61f3c61e554690fab4d99eea0421279f}{move\-Piece\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static void \hyperlink{classgame_a8f42d4a935923af0b7957f37ac4e9866}{Toggle\-Check} (\hyperlink{classpieces}{pieces} current)
+\item 
+static \hyperlink{classpieces}{pieces} \hyperlink{classgame_a185d3d3e4c989894ae491fe7cc25d654}{Create\-Temp\-King} (\hyperlink{classpieces}{pieces} current\-Color)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This class holds basic game functions. It holds the function that moves pieces, and toggles whether or not a king is in check 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgame_aa3eafc5948bf2ac3c082e0efd47e1876}{\index{game@{game}!check\-And\-Move\-Piece@{check\-And\-Move\-Piece}}
+\index{check\-And\-Move\-Piece@{check\-And\-Move\-Piece}!game@{game}}
+\subsubsection[{check\-And\-Move\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}static boolean game.\-check\-And\-Move\-Piece (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classgame_aa3eafc5948bf2ac3c082e0efd47e1876}
+Moves pieces-\/main game play function. This is the function called for any movement of any piece on the board. It checks if the move is valid or not, and if it is, moves the piece.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The currently selected piece the player has chosen to move \\
+\hline
+{\em requested} & The tile that the user wishes to move the currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that is true if move is successfully made, false if move is invalid and not made 
+\end{DoxyReturn}
+\hypertarget{classgame_a185d3d3e4c989894ae491fe7cc25d654}{\index{game@{game}!Create\-Temp\-King@{Create\-Temp\-King}}
+\index{Create\-Temp\-King@{Create\-Temp\-King}!game@{game}}
+\subsubsection[{Create\-Temp\-King}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pieces} game.\-Create\-Temp\-King (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{current\-Color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classgame_a185d3d3e4c989894ae491fe7cc25d654}
+Helper function that creates a temporary king piece for testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\-Color} & A piece of the player so we can get color of king \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a temporary king test piece with accurate color name and location. 
+\end{DoxyReturn}
+\hypertarget{classgame_afa8e7c21f9945b052f83b80eb9e87149}{\index{game@{game}!move\-Piece@{move\-Piece}}
+\index{move\-Piece@{move\-Piece}!game@{game}}
+\subsubsection[{move\-Piece}]{\setlength{\rightskip}{0pt plus 5cm}static boolean game.\-move\-Piece (
+\begin{DoxyParamCaption}
+\item[{piecesboard}]{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classgame_afa8e7c21f9945b052f83b80eb9e87149}
+This function is mainly a switch, checking what piece it is, making sure is valid, and moving it if it can. It is a helper function for check\-And\-Move\-Piece. It D\-O\-E\-S N\-O\-T check if the move puts own king in check. Rather, it just checks if the piece is able to move there
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board with pieces \\
+\hline
+{\em current} & The current piece that wishes to be moved \\
+\hline
+{\em the} & requested spot the piece wants to be moved to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that is true if piece is moved and valid, false if not. 
+\end{DoxyReturn}
+\hypertarget{classgame_a61f3c61e554690fab4d99eea0421279f}{\index{game@{game}!move\-Piece\-Helper@{move\-Piece\-Helper}}
+\index{move\-Piece\-Helper@{move\-Piece\-Helper}!game@{game}}
+\subsubsection[{move\-Piece\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static void game.\-move\-Piece\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classgame_a61f3c61e554690fab4d99eea0421279f}
+This is a helper function for move\-Piece. It moves pieces and updates the board
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The selected piece that will be moved \\
+\hline
+{\em requested} & The requested location the piece will be moved to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classgame_a8f42d4a935923af0b7957f37ac4e9866}{\index{game@{game}!Toggle\-Check@{Toggle\-Check}}
+\index{Toggle\-Check@{Toggle\-Check}!game@{game}}
+\subsubsection[{Toggle\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static void game.\-Toggle\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{current}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classgame_a8f42d4a935923af0b7957f37ac4e9866}
+This function turns check off for a player. A simple helper function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & piece of a player to check if current player is white or black \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/game.\-java\end{DoxyCompactItemize}

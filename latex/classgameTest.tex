@@ -1,0 +1,81 @@
+\hypertarget{classgameTest}{\section{game\-Test Class Reference}
+\label{classgameTest}\index{game\-Test@{game\-Test}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classgameTest_a704a7770c9d5f183fd81e721870b8e05}{can\-Move\-King} ()
+\item 
+void \hyperlink{classgameTest_ad25897edb23f02c58482f47417549bf4}{cant\-Move\-King} ()
+\item 
+void \hyperlink{classgameTest_a6efbf26671cc0a88367bc1d34b2e56f8}{check\-And\-Move\-Piece\-Block} ()
+\item 
+void \hyperlink{classgameTest_a13c4f0101503f1357afeddc1ef2b028a}{princess\-To\-Block} ()
+\item 
+void \hyperlink{classgameTest_a4aad3a5dbc122eb1fe838762f04520a7}{empress\-To\-Block} ()
+\item 
+void \hyperlink{classgameTest_a9322327407eb1d9ad0e9d4fee1d9137f}{test\-Cause\-Own\-Check} ()
+\item 
+void \hyperlink{classgameTest_a6f1a952d9bdf97215f37b63c41d0af9f}{check\-Pawn\-Function} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+Testing Check based logic. Tests everything to do with putting a king and getting a king out of check. All tests start with king in check. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classgameTest_a704a7770c9d5f183fd81e721870b8e05}{\index{game\-Test@{game\-Test}!can\-Move\-King@{can\-Move\-King}}
+\index{can\-Move\-King@{can\-Move\-King}!gameTest@{game\-Test}}
+\subsubsection[{can\-Move\-King}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-can\-Move\-King (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a704a7770c9d5f183fd81e721870b8e05}
+Tests if a king can move out of check. Rook puts king in check, king moves out of check. \hypertarget{classgameTest_ad25897edb23f02c58482f47417549bf4}{\index{game\-Test@{game\-Test}!cant\-Move\-King@{cant\-Move\-King}}
+\index{cant\-Move\-King@{cant\-Move\-King}!gameTest@{game\-Test}}
+\subsubsection[{cant\-Move\-King}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-cant\-Move\-King (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_ad25897edb23f02c58482f47417549bf4}
+Testing that a king can't move itself into check. King tries to move itself into a square enemy queen is guarding. Move is invalid and fails \hypertarget{classgameTest_a6efbf26671cc0a88367bc1d34b2e56f8}{\index{game\-Test@{game\-Test}!check\-And\-Move\-Piece\-Block@{check\-And\-Move\-Piece\-Block}}
+\index{check\-And\-Move\-Piece\-Block@{check\-And\-Move\-Piece\-Block}!gameTest@{game\-Test}}
+\subsubsection[{check\-And\-Move\-Piece\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-check\-And\-Move\-Piece\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a6efbf26671cc0a88367bc1d34b2e56f8}
+Test to see if a piece is able to move to block a check. Rook is putting king in check. Horse is able to get in the way of the rook and block check. Also checks if horse can move anywhere else and not block the check. Tests that moving a piece that does not put own king out of check while own king is currently in check fails. \hypertarget{classgameTest_a6f1a952d9bdf97215f37b63c41d0af9f}{\index{game\-Test@{game\-Test}!check\-Pawn\-Function@{check\-Pawn\-Function}}
+\index{check\-Pawn\-Function@{check\-Pawn\-Function}!gameTest@{game\-Test}}
+\subsubsection[{check\-Pawn\-Function}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-check\-Pawn\-Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a6f1a952d9bdf97215f37b63c41d0af9f}
+Tests helper function for pawn to make sure there are no Index out of bounds errors. \hypertarget{classgameTest_a4aad3a5dbc122eb1fe838762f04520a7}{\index{game\-Test@{game\-Test}!empress\-To\-Block@{empress\-To\-Block}}
+\index{empress\-To\-Block@{empress\-To\-Block}!gameTest@{game\-Test}}
+\subsubsection[{empress\-To\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-empress\-To\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a4aad3a5dbc122eb1fe838762f04520a7}
+This test is meant to see if empress can block and put king out of check. Checks to see if empress can move to a spot that allows king out of check. Also checks an invalid move that leaves king in check. The invalid move would be valid if king was not in check \hypertarget{classgameTest_a13c4f0101503f1357afeddc1ef2b028a}{\index{game\-Test@{game\-Test}!princess\-To\-Block@{princess\-To\-Block}}
+\index{princess\-To\-Block@{princess\-To\-Block}!gameTest@{game\-Test}}
+\subsubsection[{princess\-To\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-princess\-To\-Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a13c4f0101503f1357afeddc1ef2b028a}
+This test is meant to see if we can move princess to put king out of check by blocking the piece putting king in check. Also makes sure princess can't move anywhere else that leaves king in check \hypertarget{classgameTest_a9322327407eb1d9ad0e9d4fee1d9137f}{\index{game\-Test@{game\-Test}!test\-Cause\-Own\-Check@{test\-Cause\-Own\-Check}}
+\index{test\-Cause\-Own\-Check@{test\-Cause\-Own\-Check}!gameTest@{game\-Test}}
+\subsubsection[{test\-Cause\-Own\-Check}]{\setlength{\rightskip}{0pt plus 5cm}void game\-Test.\-test\-Cause\-Own\-Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classgameTest_a9322327407eb1d9ad0e9d4fee1d9137f}
+Tests that player is not allowed to move a piece that puts their own king in check. For example moving a piece that was blocking enemy queen from putting own king in check 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/game\-Test.\-java\end{DoxyCompactItemize}

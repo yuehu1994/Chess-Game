@@ -1,0 +1,201 @@
+\hypertarget{classking}{\section{king Class Reference}
+\label{classking}\index{king@{king}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classking_ab7d82f2e4477fd7212c03395cdba10b2}{valid\-Move} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classking_a9975add6d58679c6e01dc08d98f725ce}{valid\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} temp\-King)
+\item 
+static boolean \hyperlink{classking_acadf7bd5502858fe4b9924bb16ef3dfc}{check\-Kings} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classking_ab1b9aa117fb9055e0cbb34769d6a35f8}{check\-All\-Directions} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classking_a7bbf661b8eeb9eb5fdf7fc44588df3ef}{check\-Knight\-Move} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classking_a395655d319b7c896e9fe66aa2c0e6022}{check\-Knight\-Top} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested, String name)
+\item 
+static boolean \hyperlink{classking_ac22ef87ee45aa848e19bde6621f5168e}{check\-Knight\-Bottom} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested, String name)
+\item 
+static boolean \hyperlink{classking_a3ccdb48365dd8c050869f8fb2bcdc857}{check\-Pawn} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} requested)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This class holds all the functions and data for both players Kings. It sees if a king can move, and sees if a king is in check. It holds functions that checks if a move for a king is valid. Also does all the handling for check scenarios. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classking_ab1b9aa117fb9055e0cbb34769d6a35f8}{\index{king@{king}!check\-All\-Directions@{check\-All\-Directions}}
+\index{check\-All\-Directions@{check\-All\-Directions}!king@{king}}
+\subsubsection[{check\-All\-Directions}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-All\-Directions (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_ab1b9aa117fb9055e0cbb34769d6a35f8}
+Helper function that checks all 8 directions of a square and sees if it is safe for king to move to said square. This function checks if a requested square is guarded by enemy rooks, bishops,queens,empress,or princess.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The location player wants to move his/her king\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean that indicates if enemy rook,bishop,queen,empress,or princess guards the square 
+\end{DoxyReturn}
+\hypertarget{classking_acadf7bd5502858fe4b9924bb16ef3dfc}{\index{king@{king}!check\-Kings@{check\-Kings}}
+\index{check\-Kings@{check\-Kings}!king@{king}}
+\subsubsection[{check\-Kings}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-Kings (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_acadf7bd5502858fe4b9924bb16ef3dfc}
+Helper function for valid\-Helper. Checks to see if enemy king is in a position to hinder prevent requested king movement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The requested space player wishes to move king\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean indicating if space is safe from enemy king or not 
+\end{DoxyReturn}
+\hypertarget{classking_ac22ef87ee45aa848e19bde6621f5168e}{\index{king@{king}!check\-Knight\-Bottom@{check\-Knight\-Bottom}}
+\index{check\-Knight\-Bottom@{check\-Knight\-Bottom}!king@{king}}
+\subsubsection[{check\-Knight\-Bottom}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-Knight\-Bottom (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_ac22ef87ee45aa848e19bde6621f5168e}
+knight\-Check helper function. Checks bottom 4 L spaces for enemy empress,princess, or knight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The requested location to move the king \\
+\hline
+{\em name} & The piece function is checking for-\/empress princess or knight\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if spot is being guarded by enemy empress princess or knight 
+\end{DoxyReturn}
+\hypertarget{classking_a7bbf661b8eeb9eb5fdf7fc44588df3ef}{\index{king@{king}!check\-Knight\-Move@{check\-Knight\-Move}}
+\index{check\-Knight\-Move@{check\-Knight\-Move}!king@{king}}
+\subsubsection[{check\-Knight\-Move}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-Knight\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_a7bbf661b8eeb9eb5fdf7fc44588df3ef}
+Helper function checks to see if an enemy knight is holding requested square, preventing king movement
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The requested location of king\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that indicates if a knight prevents king movement 
+\end{DoxyReturn}
+\hypertarget{classking_a395655d319b7c896e9fe66aa2c0e6022}{\index{king@{king}!check\-Knight\-Top@{check\-Knight\-Top}}
+\index{check\-Knight\-Top@{check\-Knight\-Top}!king@{king}}
+\subsubsection[{check\-Knight\-Top}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-Knight\-Top (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested, }
+\item[{String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_a395655d319b7c896e9fe66aa2c0e6022}
+knight\-Check helper function. Checks top 4 L spaces for enemy empress,princess, or knight.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The requested location to move the king \\
+\hline
+{\em name} & The piece function is checking for-\/empress princess or knight\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if spot is being guarded by enemy empress princess or knight 
+\end{DoxyReturn}
+\hypertarget{classking_a3ccdb48365dd8c050869f8fb2bcdc857}{\index{king@{king}!check\-Pawn@{check\-Pawn}}
+\index{check\-Pawn@{check\-Pawn}!king@{king}}
+\subsubsection[{check\-Pawn}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-check\-Pawn (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_a3ccdb48365dd8c050869f8fb2bcdc857}
+This function is to check if a pawn is preventing a king from moving to a space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em requested} & The requested location of the king to move to\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean indicating if space is being valid or not 
+\end{DoxyReturn}
+\hypertarget{classking_a9975add6d58679c6e01dc08d98f725ce}{\index{king@{king}!valid\-Helper@{valid\-Helper}}
+\index{valid\-Helper@{valid\-Helper}!king@{king}}
+\subsubsection[{valid\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-valid\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{temp\-King}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_a9975add6d58679c6e01dc08d98f725ce}
+This helper function helps \hyperlink{classvalidMove}{valid\-Move}. It checks if the new location that the player wants the king to move to will put the king in check. A king cannot move to a position where it puts itself in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em temp\-King} & location of requested king movement\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean that is true if space is safe, false if space is guarded by another piece 
+\end{DoxyReturn}
+\hypertarget{classking_ab7d82f2e4477fd7212c03395cdba10b2}{\index{king@{king}!valid\-Move@{valid\-Move}}
+\index{valid\-Move@{valid\-Move}!king@{king}}
+\subsubsection[{valid\-Move}]{\setlength{\rightskip}{0pt plus 5cm}static boolean king.\-valid\-Move (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classking_ab7d82f2e4477fd7212c03395cdba10b2}
+This class sees if a king movement is valid or not. It first checks if requested piece is one space away, checks if the spot is blocked by own piece, and checks to see if the move will put the king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current king piece \\
+\hline
+{\em requested} & The requested spot the player wants the king to go\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean indicating if a king can move to the requested positino 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/king.\-java\end{DoxyCompactItemize}

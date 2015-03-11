@@ -1,0 +1,72 @@
+\hypertarget{classcheckAndStalemateTest}{\section{check\-And\-Stalemate\-Test Class Reference}
+\label{classcheckAndStalemateTest}\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcheckAndStalemateTest_a5668f045112354c1f68d21672392fe6f}{not\-Check\-Mate} ()
+\item 
+void \hyperlink{classcheckAndStalemateTest_aa1921599cca9f683a7ec85b55b9e89d4}{Check\-Mate2} ()
+\item 
+void \hyperlink{classcheckAndStalemateTest_ae25383d95c6447b95c496393399a0c63}{check\-Mate\-Corner} ()
+\item 
+void \hyperlink{classcheckAndStalemateTest_a702353db483f5ae6465650b83bc483f5}{not\-Check\-Mate2} ()
+\item 
+void \hyperlink{classcheckAndStalemateTest_abeed66bda654ac5801e03c4a8cef2771}{test\-Stale\-Mate} ()
+\item 
+void \hyperlink{classcheckAndStalemateTest_ae098f07b4409b04df0d693aa12ce7761}{test\-Not\-Stale\-Mate} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+Purpose of this test file to to test Check and stale mate conditions. Checks both when in check mate and when not in check mate 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcheckAndStalemateTest_aa1921599cca9f683a7ec85b55b9e89d4}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!Check\-Mate2@{Check\-Mate2}}
+\index{Check\-Mate2@{Check\-Mate2}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{Check\-Mate2}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-Check\-Mate2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_aa1921599cca9f683a7ec85b55b9e89d4}
+test function that king is in check mate. Player cannot move and game is over \hypertarget{classcheckAndStalemateTest_ae25383d95c6447b95c496393399a0c63}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!check\-Mate\-Corner@{check\-Mate\-Corner}}
+\index{check\-Mate\-Corner@{check\-Mate\-Corner}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{check\-Mate\-Corner}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-check\-Mate\-Corner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_ae25383d95c6447b95c496393399a0c63}
+Function tests corner check mate. Makes sure there are no Index out of bounds errors \hypertarget{classcheckAndStalemateTest_a5668f045112354c1f68d21672392fe6f}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!not\-Check\-Mate@{not\-Check\-Mate}}
+\index{not\-Check\-Mate@{not\-Check\-Mate}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{not\-Check\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-not\-Check\-Mate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_a5668f045112354c1f68d21672392fe6f}
+Tests king not in check mate scenario. No enemy piece putting king in check \hypertarget{classcheckAndStalemateTest_a702353db483f5ae6465650b83bc483f5}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!not\-Check\-Mate2@{not\-Check\-Mate2}}
+\index{not\-Check\-Mate2@{not\-Check\-Mate2}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{not\-Check\-Mate2}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-not\-Check\-Mate2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_a702353db483f5ae6465650b83bc483f5}
+Tests a scenario where king cannot move, but another piece owned by player can block the check, preventing a check mate. King cannot move and in check by enemy queen, but own empress can block queen \hypertarget{classcheckAndStalemateTest_ae098f07b4409b04df0d693aa12ce7761}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!test\-Not\-Stale\-Mate@{test\-Not\-Stale\-Mate}}
+\index{test\-Not\-Stale\-Mate@{test\-Not\-Stale\-Mate}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{test\-Not\-Stale\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-test\-Not\-Stale\-Mate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_ae098f07b4409b04df0d693aa12ce7761}
+Checks if player is not in stale mate. Same set up as check\-Stale\-Mate, except this time player has extra queen he/she is able to move. \hypertarget{classcheckAndStalemateTest_abeed66bda654ac5801e03c4a8cef2771}{\index{check\-And\-Stalemate\-Test@{check\-And\-Stalemate\-Test}!test\-Stale\-Mate@{test\-Stale\-Mate}}
+\index{test\-Stale\-Mate@{test\-Stale\-Mate}!checkAndStalemateTest@{check\-And\-Stalemate\-Test}}
+\subsubsection[{test\-Stale\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}void check\-And\-Stalemate\-Test.\-test\-Stale\-Mate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcheckAndStalemateTest_abeed66bda654ac5801e03c4a8cef2771}
+Tests a stale mate. Player is in stale mate, and has no piece he can move. Game is over. 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/check\-And\-Stalemate\-Test.\-java\end{DoxyCompactItemize}

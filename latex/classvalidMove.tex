@@ -1,0 +1,193 @@
+\hypertarget{classvalidMove}{\section{valid\-Move Class Reference}
+\label{classvalidMove}\index{valid\-Move@{valid\-Move}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classvalidMove_a4a890235e327a561b21494e3e1c11fdc}{pawn\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_a1fad9b7f674459755cbfa6a093371010}{rook\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_a06e247e1e717bde70bb504e04584c61e}{knight\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_a878fc200b48f777b187908d2eec95e8b}{bishop\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_a73bdc32b286f5c071ce4de02b767a290}{queen\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_adac8f690ee1a78de69ae0ebbd2aa6a88}{princess\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMove_ac5d37e4fc1b5a5a14c4420c41bfcb047}{empress\-Valid} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMove_DESCRIPTON}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-O\-N}\label{classvalidMove_DESCRIPTON}
+Purpose of this class is to check to see if requested move is valid or not. Each piece has individual function These check if a piece is legally allowed to move piece. It does not check if the move will put own king in check. This class will indicate if the move will put the enemy king into check. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classvalidMove_a878fc200b48f777b187908d2eec95e8b}{\index{valid\-Move@{valid\-Move}!bishop\-Valid@{bishop\-Valid}}
+\index{bishop\-Valid@{bishop\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{bishop\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-bishop\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_a878fc200b48f777b187908d2eec95e8b}
+This function is to test to see if a bishop can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_ac5d37e4fc1b5a5a14c4420c41bfcb047}{\index{valid\-Move@{valid\-Move}!empress\-Valid@{empress\-Valid}}
+\index{empress\-Valid@{empress\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{empress\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-empress\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_ac5d37e4fc1b5a5a14c4420c41bfcb047}
+This function is to test to see if a empress (knight + rook) can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_a06e247e1e717bde70bb504e04584c61e}{\index{valid\-Move@{valid\-Move}!knight\-Valid@{knight\-Valid}}
+\index{knight\-Valid@{knight\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{knight\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-knight\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_a06e247e1e717bde70bb504e04584c61e}
+This function is to test to see if a knight can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_a4a890235e327a561b21494e3e1c11fdc}{\index{valid\-Move@{valid\-Move}!pawn\-Valid@{pawn\-Valid}}
+\index{pawn\-Valid@{pawn\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{pawn\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-pawn\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_a4a890235e327a561b21494e3e1c11fdc}
+This function is to test to see if a pawn can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_adac8f690ee1a78de69ae0ebbd2aa6a88}{\index{valid\-Move@{valid\-Move}!princess\-Valid@{princess\-Valid}}
+\index{princess\-Valid@{princess\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{princess\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-princess\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_adac8f690ee1a78de69ae0ebbd2aa6a88}
+This function is to test to see if a princess (knight + bishop) can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_a73bdc32b286f5c071ce4de02b767a290}{\index{valid\-Move@{valid\-Move}!queen\-Valid@{queen\-Valid}}
+\index{queen\-Valid@{queen\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{queen\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-queen\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_a73bdc32b286f5c071ce4de02b767a290}
+This function is to test to see if a queen can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMove_a1fad9b7f674459755cbfa6a093371010}{\index{valid\-Move@{valid\-Move}!rook\-Valid@{rook\-Valid}}
+\index{rook\-Valid@{rook\-Valid}!validMove@{valid\-Move}}
+\subsubsection[{rook\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move.\-rook\-Valid (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMove_a1fad9b7f674459755cbfa6a093371010}
+This function is to test to see if a rook can be legally moved to a new location Also checks if the pawn move (if move is legal) puts enemy king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/valid\-Move.\-java\end{DoxyCompactItemize}

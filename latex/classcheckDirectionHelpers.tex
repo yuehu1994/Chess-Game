@@ -1,0 +1,70 @@
+\hypertarget{classcheckDirectionHelpers}{\section{check\-Direction\-Helpers Class Reference}
+\label{classcheckDirectionHelpers}\index{check\-Direction\-Helpers@{check\-Direction\-Helpers}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classcheckDirectionHelpers_a8ef5c562966fec3e91481deb70e9614e}{check\-Directions\-Straight\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, int temp\-Row, int temp\-Column)
+\item 
+static boolean \hyperlink{classcheckDirectionHelpers_ae70944ef7cfbfcf227ce835c2ebf7138}{check\-Directions\-Diagonal\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, int temp\-Row, int temp\-Column)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This class is helper functions for \hyperlink{classcheckDirection}{check\-Direction} These functions check if space is a piece that puts king in check 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcheckDirectionHelpers_ae70944ef7cfbfcf227ce835c2ebf7138}{\index{check\-Direction\-Helpers@{check\-Direction\-Helpers}!check\-Directions\-Diagonal\-Helper@{check\-Directions\-Diagonal\-Helper}}
+\index{check\-Directions\-Diagonal\-Helper@{check\-Directions\-Diagonal\-Helper}!checkDirectionHelpers@{check\-Direction\-Helpers}}
+\subsubsection[{check\-Directions\-Diagonal\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction\-Helpers.\-check\-Directions\-Diagonal\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{int}]{temp\-Row, }
+\item[{int}]{temp\-Column}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirectionHelpers_ae70944ef7cfbfcf227ce835c2ebf7138}
+This function checks if a piece is queen bishop or princess in the diagonal directions Helper for \hyperlink{classcheckDirection}{check\-Direction} up and down.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The selected tile location on board \\
+\hline
+{\em temp\-Row} & The row iterator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean if that piece is a queen biship or princess 
+\end{DoxyReturn}
+\hypertarget{classcheckDirectionHelpers_a8ef5c562966fec3e91481deb70e9614e}{\index{check\-Direction\-Helpers@{check\-Direction\-Helpers}!check\-Directions\-Straight\-Helper@{check\-Directions\-Straight\-Helper}}
+\index{check\-Directions\-Straight\-Helper@{check\-Directions\-Straight\-Helper}!checkDirectionHelpers@{check\-Direction\-Helpers}}
+\subsubsection[{check\-Directions\-Straight\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction\-Helpers.\-check\-Directions\-Straight\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{int}]{temp\-Row, }
+\item[{int}]{temp\-Column}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirectionHelpers_a8ef5c562966fec3e91481deb70e9614e}
+This function checks if a piece is queen rook or empress in the up/down/left/right direction Helper for \hyperlink{classcheckDirection}{check\-Direction} up and down.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The selected tile location on board \\
+\hline
+{\em temp\-Row} & The row iterator\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean if that piece is a queen rook or empress 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/check\-Direction\-Helpers.\-java\end{DoxyCompactItemize}

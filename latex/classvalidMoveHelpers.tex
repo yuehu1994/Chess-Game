@@ -1,0 +1,159 @@
+\hypertarget{classvalidMoveHelpers}{\section{valid\-Move\-Helpers Class Reference}
+\label{classvalidMoveHelpers}\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classvalidMoveHelpers_abebb16f9d6e712f9b4faf303212fc6c5}{find\-Direction\-Diagonal} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMoveHelpers_addc359311febcf3cd8577ba03943bb54}{find\-Direction\-Straight} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static boolean \hyperlink{classvalidMoveHelpers_a08434de9eceaf32133c26cc9eb7ce955}{knight\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static void \hyperlink{classvalidMoveHelpers_ac175ec02ffe0bd83ab765e2d9eb1fd85}{king\-Check\-Straight} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static void \hyperlink{classvalidMoveHelpers_a6d312c237553af4824dfc44893b83bcf}{king\-Check\-Diagonal} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\item 
+static void \hyperlink{classvalidMoveHelpers_af369e45d918eeee3db657652e520fef7}{knight\-Check} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+Helper functions for \hyperlink{classvalidMove}{valid\-Move}. Helps calculations 
+
+\subsection{Member Function Documentation}
+\hypertarget{classvalidMoveHelpers_abebb16f9d6e712f9b4faf303212fc6c5}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!find\-Direction\-Diagonal@{find\-Direction\-Diagonal}}
+\index{find\-Direction\-Diagonal@{find\-Direction\-Diagonal}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{find\-Direction\-Diagonal}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move\-Helpers.\-find\-Direction\-Diagonal (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_abebb16f9d6e712f9b4faf303212fc6c5}
+This function is a helper to determine if a diagonal move is legal for a piece.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMoveHelpers_addc359311febcf3cd8577ba03943bb54}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!find\-Direction\-Straight@{find\-Direction\-Straight}}
+\index{find\-Direction\-Straight@{find\-Direction\-Straight}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{find\-Direction\-Straight}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move\-Helpers.\-find\-Direction\-Straight (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_addc359311febcf3cd8577ba03943bb54}
+This is a helper function that checks to see if moving up, down, left, right is valid. It assumes that input is same column or row, as the calling functions check that input is one of those 4 directions
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+\hypertarget{classvalidMoveHelpers_a6d312c237553af4824dfc44893b83bcf}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!king\-Check\-Diagonal@{king\-Check\-Diagonal}}
+\index{king\-Check\-Diagonal@{king\-Check\-Diagonal}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{king\-Check\-Diagonal}]{\setlength{\rightskip}{0pt plus 5cm}static void valid\-Move\-Helpers.\-king\-Check\-Diagonal (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_a6d312c237553af4824dfc44893b83bcf}
+Helper function to see if a piece movement puts an enemy king in check. Called on pieces that can put enemy king in check via diagonal fashion(bishop, queen, princess)
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece \\
+\hline
+\end{DoxyParams}
+\hypertarget{classvalidMoveHelpers_ac175ec02ffe0bd83ab765e2d9eb1fd85}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!king\-Check\-Straight@{king\-Check\-Straight}}
+\index{king\-Check\-Straight@{king\-Check\-Straight}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{king\-Check\-Straight}]{\setlength{\rightskip}{0pt plus 5cm}static void valid\-Move\-Helpers.\-king\-Check\-Straight (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_ac175ec02ffe0bd83ab765e2d9eb1fd85}
+Helper function to see if a piece movement puts an enemy king in check. Called on pieces that can put enemy king in check via straight fashion(rook, queen, empress)
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece \\
+\hline
+\end{DoxyParams}
+\hypertarget{classvalidMoveHelpers_af369e45d918eeee3db657652e520fef7}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!knight\-Check@{knight\-Check}}
+\index{knight\-Check@{knight\-Check}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{knight\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static void valid\-Move\-Helpers.\-knight\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_af369e45d918eeee3db657652e520fef7}
+Helper function to see if a piece movement puts an enemy king in check. Called on pieces that can put enemy king in check via L shape fashion(knight, princess, empress)
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece \\
+\hline
+\end{DoxyParams}
+\hypertarget{classvalidMoveHelpers_a08434de9eceaf32133c26cc9eb7ce955}{\index{valid\-Move\-Helpers@{valid\-Move\-Helpers}!knight\-Helper@{knight\-Helper}}
+\index{knight\-Helper@{knight\-Helper}!validMoveHelpers@{valid\-Move\-Helpers}}
+\subsubsection[{knight\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static boolean valid\-Move\-Helpers.\-knight\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classvalidMoveHelpers_a08434de9eceaf32133c26cc9eb7ce955}
+This function is a helper to determine if moving in an L shape is valid.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em current} & The current piece player wants to move \\
+\hline
+{\em requested} & The location player wants to move currently selected piece\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating if move is valid. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/valid\-Move\-Helpers.\-java\end{DoxyCompactItemize}

@@ -1,0 +1,207 @@
+\hypertarget{classendGameHelpers}{\section{end\-Game\-Helpers Class Reference}
+\label{classendGameHelpers}\index{end\-Game\-Helpers@{end\-Game\-Helpers}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classendGameHelpers_af70c6992d6a206eb89390d43bb94127e}{Scan\-Board} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, String color, boolean stale\-Mate)
+\item 
+static boolean \hyperlink{classendGameHelpers_ad647747d8db844a580cf5d390cf5c257}{test\-Kill\-Check} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} piece)
+\item 
+static void \hyperlink{classendGameHelpers_a951520156dbcb7cb09bbe3fdc6608e37}{fill\-Must\-Go\-Tiles} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} \hyperlink{classking}{king})
+\item 
+static void \hyperlink{classendGameHelpers_a4b48a54058aa6d4d7bec6bdaa193ef42}{fill\-Check\-Tiles\-Vector} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} temp\-King, boolean must\-Go\-Vector)
+\item 
+static boolean \hyperlink{classendGameHelpers_adbc97e6ce7eb3a4a404a211d21e8f2d8}{check\-King} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} king\-Piece)
+\item 
+static \hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]} \hyperlink{classendGameHelpers_a8aa76533cb6df3b090e0725f2b6df635}{find\-Coords\-Straight} (\hyperlink{classpieces}{pieces} piece)
+\item 
+static \hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]} \hyperlink{classendGameHelpers_affa91018c7b90d5e60b9664372bbe4f1}{find\-Coords\-Diagonal} (\hyperlink{classpieces}{pieces} piece)
+\item 
+static \hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]} \hyperlink{classendGameHelpers_a84ae781b283ad06b42333db547f8f5e1}{find\-Horse\-Moves} (\hyperlink{classpieces}{pieces} piece)
+\item 
+static boolean \hyperlink{classendGameHelpers_ad8baa6af7c5b4fb227b0ed5a9477b8a2}{stale\-Mate\-Helper} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} piece)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This class holds helper functions for end\-Game.\-java. These are helper functions that calculate if an engame senerio (check mate or stale mate) is in effect 
+
+\subsection{Member Function Documentation}
+\hypertarget{classendGameHelpers_adbc97e6ce7eb3a4a404a211d21e8f2d8}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!check\-King@{check\-King}}
+\index{check\-King@{check\-King}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{check\-King}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game\-Helpers.\-check\-King (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{king\-Piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_adbc97e6ce7eb3a4a404a211d21e8f2d8}
+Checks to see if King has any valid moves. This function tries to move the king to all 8 directional spots and tests if those spots are valid. It checks if its blocked and checks if it puts the king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board with current pieces \\
+\hline
+{\em king\-Piece} & The location of the respective players king\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean that is true if the king has valid spots it can move to, or false if it does not 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_a4b48a54058aa6d4d7bec6bdaa193ef42}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!fill\-Check\-Tiles\-Vector@{fill\-Check\-Tiles\-Vector}}
+\index{fill\-Check\-Tiles\-Vector@{fill\-Check\-Tiles\-Vector}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{fill\-Check\-Tiles\-Vector}]{\setlength{\rightskip}{0pt plus 5cm}static void end\-Game\-Helpers.\-fill\-Check\-Tiles\-Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{temp\-King, }
+\item[{boolean}]{must\-Go\-Vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_a4b48a54058aa6d4d7bec6bdaa193ef42}
+This function fills the Check\-Tiles vector in end\-Game.\-java. It finds all the pieces that put the king in check, and stores them in the Check\-Tiles vector. There is a flag that is checked if later it is found that only a single piece is putting the king in check, and therefore this function will also add in tiles to the must\-Go\-Tiles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em temp\-King} & The current location of the respective players king \\
+\hline
+{\em must\-Go\-Vector} & A boolean flag that indicates if we want to fill in the must\-Go\-Vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{classendGameHelpers_a951520156dbcb7cb09bbe3fdc6608e37}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!fill\-Must\-Go\-Tiles@{fill\-Must\-Go\-Tiles}}
+\index{fill\-Must\-Go\-Tiles@{fill\-Must\-Go\-Tiles}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{fill\-Must\-Go\-Tiles}]{\setlength{\rightskip}{0pt plus 5cm}static void end\-Game\-Helpers.\-fill\-Must\-Go\-Tiles (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_a951520156dbcb7cb09bbe3fdc6608e37}
+This function fills the must\-Go\-Tiles array with tile locations that can be filled to get out of a check. It stores all the possible tiles a piece needs to move to into the must\-Go\-Tiles vector to get out of a check. Guarantees that only 1 spot of check\-Pieces is filled due to if more than one piece puts king in check, never reach here because player can only move king.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em king} & The current location of the king piece for the respective player \\
+\hline
+\end{DoxyParams}
+\hypertarget{classendGameHelpers_affa91018c7b90d5e60b9664372bbe4f1}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!find\-Coords\-Diagonal@{find\-Coords\-Diagonal}}
+\index{find\-Coords\-Diagonal@{find\-Coords\-Diagonal}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{find\-Coords\-Diagonal}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pieces} \mbox{[}$\,$\mbox{]} end\-Game\-Helpers.\-find\-Coords\-Diagonal (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_affa91018c7b90d5e60b9664372bbe4f1}
+This is a helper function for check\-King. It generates an array of all 4 diagonal locations (row/columns) for the check\-King function to use
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The current location of the players respective king \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinates An array that holds all diagonal locations of king moves. 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_a8aa76533cb6df3b090e0725f2b6df635}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!find\-Coords\-Straight@{find\-Coords\-Straight}}
+\index{find\-Coords\-Straight@{find\-Coords\-Straight}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{find\-Coords\-Straight}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pieces} \mbox{[}$\,$\mbox{]} end\-Game\-Helpers.\-find\-Coords\-Straight (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_a8aa76533cb6df3b090e0725f2b6df635}
+This is a helper function for check\-King. It generates an array of up,down,left,right locations (row/columns) for the check\-King function to use
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The location of the king piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinates Returns an array holding locations of spots up,down,left,right of the king 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_a84ae781b283ad06b42333db547f8f5e1}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!find\-Horse\-Moves@{find\-Horse\-Moves}}
+\index{find\-Horse\-Moves@{find\-Horse\-Moves}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{find\-Horse\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf pieces} \mbox{[}$\,$\mbox{]} end\-Game\-Helpers.\-find\-Horse\-Moves (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_a84ae781b283ad06b42333db547f8f5e1}
+This function is a helper for stale\-Mate\-Helper function. It determines all possible locations a knight piece is able to move to.
+
+
+\begin{DoxyParams}{Parameters}
+{\em piece} & The current location on the board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+coordinates An array holds locations of all horse (l shaped) moves from a spot on board 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_af70c6992d6a206eb89390d43bb94127e}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!Scan\-Board@{Scan\-Board}}
+\index{Scan\-Board@{Scan\-Board}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{Scan\-Board}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game\-Helpers.\-Scan\-Board (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{String}]{color, }
+\item[{boolean}]{stale\-Mate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_af70c6992d6a206eb89390d43bb94127e}
+Is called if King is in check. It scans the board, and looks for all of players pieces. Once finds a piece, Checks to see if that piece can block check by blocking the piece putting the king in check or taking the piece putting the king in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board with pieces in current positions \\
+\hline
+{\em color} & The color of the current player \\
+\hline
+{\em stale\-Mate} & a boolean flag checking if scan is checking for a stalemate or checkmate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean saying if any piece is able to move if stalemate flag is on or if any piece can block checkmate 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_ad8baa6af7c5b4fb227b0ed5a9477b8a2}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!stale\-Mate\-Helper@{stale\-Mate\-Helper}}
+\index{stale\-Mate\-Helper@{stale\-Mate\-Helper}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{stale\-Mate\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game\-Helpers.\-stale\-Mate\-Helper (
+\begin{DoxyParamCaption}
+\item[{piecesboard}]{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_ad8baa6af7c5b4fb227b0ed5a9477b8a2}
+This is a helper function for stalemate. It takes a piece of a player and checks if that piece is able to move anywhere.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em piece} & The current location selected\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean that is true if that piece can move, false if piece cannot move 
+\end{DoxyReturn}
+\hypertarget{classendGameHelpers_ad647747d8db844a580cf5d390cf5c257}{\index{end\-Game\-Helpers@{end\-Game\-Helpers}!test\-Kill\-Check@{test\-Kill\-Check}}
+\index{test\-Kill\-Check@{test\-Kill\-Check}!endGameHelpers@{end\-Game\-Helpers}}
+\subsubsection[{test\-Kill\-Check}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game\-Helpers.\-test\-Kill\-Check (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{piece}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGameHelpers_ad647747d8db844a580cf5d390cf5c257}
+This is a helper function for Scan\-Board This function tests if the piece can be moved to one of the squares that will terminate a check Once Scan\-Board finds one of the players pieces, it checks if that piece can move to a spot that terminates the check by comparing valid moves of that piece to the must\-Go\-Tiles vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board and pieces \\
+\hline
+{\em piece} & The piece that is being tested to see if it can block check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean stating whether or not the piece can terminate check 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/end\-Game\-Helpers.\-java\end{DoxyCompactItemize}

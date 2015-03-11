@@ -1,0 +1,226 @@
+\hypertarget{classcheckDirection}{\section{check\-Direction Class Reference}
+\label{classcheckDirection}\index{check\-Direction@{check\-Direction}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classcheckDirection_ae08c8105c6b5942f70ca0e1ef5f1e0c4}{check\-Up} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_ad7229f4047580e07b0115944773c63e1}{check\-Down} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_a3d506313ab3d4bafab7cda3428e6f5b3}{check\-Right} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_aa23f25e9d01448e4715df922459f562e}{check\-Left} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_a3f9399e158002f1c2d9b9cfc0a9a9082}{check\-North\-West} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_a4252e99d950a0601ab2ca8bda400be4a}{check\-North\-East} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_a04521f420deca6fc4a20f171e47565cf}{check\-South\-West} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\item 
+static boolean \hyperlink{classcheckDirection_a0ac4083e9b7f36b88da404a01fe16b59}{check\-South\-East} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, \hyperlink{classpieces}{pieces} current, \hyperlink{classpieces}{pieces} requested, boolean \hyperlink{classking}{king})
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This File holds helper functions that checks to see if going in some direction is legal. Directions include up down left right northwest northeast south west south east. Also used in king logic to check if a move puts a king in danger-\/illegal king move 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcheckDirection_ad7229f4047580e07b0115944773c63e1}{\index{check\-Direction@{check\-Direction}!check\-Down@{check\-Down}}
+\index{check\-Down@{check\-Down}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-Down}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-Down (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_ad7229f4047580e07b0115944773c63e1}
+This function checks to see if going directly down is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_aa23f25e9d01448e4715df922459f562e}{\index{check\-Direction@{check\-Direction}!check\-Left@{check\-Left}}
+\index{check\-Left@{check\-Left}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-Left}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-Left (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_aa23f25e9d01448e4715df922459f562e}
+This function checks to see if going directly left is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_a4252e99d950a0601ab2ca8bda400be4a}{\index{check\-Direction@{check\-Direction}!check\-North\-East@{check\-North\-East}}
+\index{check\-North\-East@{check\-North\-East}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-North\-East}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-North\-East (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_a4252e99d950a0601ab2ca8bda400be4a}
+This function checks to see if going directly northeast is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_a3f9399e158002f1c2d9b9cfc0a9a9082}{\index{check\-Direction@{check\-Direction}!check\-North\-West@{check\-North\-West}}
+\index{check\-North\-West@{check\-North\-West}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-North\-West}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-North\-West (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_a3f9399e158002f1c2d9b9cfc0a9a9082}
+This function checks to see if going directly northwest is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_a3d506313ab3d4bafab7cda3428e6f5b3}{\index{check\-Direction@{check\-Direction}!check\-Right@{check\-Right}}
+\index{check\-Right@{check\-Right}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-Right}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-Right (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_a3d506313ab3d4bafab7cda3428e6f5b3}
+This function checks to see if going directly right is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_a0ac4083e9b7f36b88da404a01fe16b59}{\index{check\-Direction@{check\-Direction}!check\-South\-East@{check\-South\-East}}
+\index{check\-South\-East@{check\-South\-East}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-South\-East}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-South\-East (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_a0ac4083e9b7f36b88da404a01fe16b59}
+This function checks to see if going directly south east is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_a04521f420deca6fc4a20f171e47565cf}{\index{check\-Direction@{check\-Direction}!check\-South\-West@{check\-South\-West}}
+\index{check\-South\-West@{check\-South\-West}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-South\-West}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-South\-West (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_a04521f420deca6fc4a20f171e47565cf}
+This function checks to see if going directly south west is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+\hypertarget{classcheckDirection_ae08c8105c6b5942f70ca0e1ef5f1e0c4}{\index{check\-Direction@{check\-Direction}!check\-Up@{check\-Up}}
+\index{check\-Up@{check\-Up}!checkDirection@{check\-Direction}}
+\subsubsection[{check\-Up}]{\setlength{\rightskip}{0pt plus 5cm}static boolean check\-Direction.\-check\-Up (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf pieces}}]{current, }
+\item[{{\bf pieces}}]{requested, }
+\item[{boolean}]{king}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classcheckDirection_ae08c8105c6b5942f70ca0e1ef5f1e0c4}
+This function checks to see if going directly up is clear. The king flag chooses if it wants to use it for the purpose of scanning a path or the purpose of seeing if a piece in the direction puts the king in check. If flag is on, also fills the vectors used in check mate functions. If flag is on, the parameter current is location of the king and function scans in direction seeing if a piece is putting the king in check in that direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The playing current playing board with pieces on it \\
+\hline
+{\em current} & The piece that is currently chosen. This is the piece the player wishes to move \\
+\hline
+{\em requested} & The tile is chosen by the player for the current piece to move to  flag to choose whether to scan to check move validity or see if a piece puts king in check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if valid for moves or if nothing in the direction causes a check on king. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/check\-Direction.\-java\end{DoxyCompactItemize}

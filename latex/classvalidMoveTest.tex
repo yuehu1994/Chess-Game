@@ -1,0 +1,99 @@
+\hypertarget{classvalidMoveTest}{\section{valid\-Move\-Test Class Reference}
+\label{classvalidMoveTest}\index{valid\-Move\-Test@{valid\-Move\-Test}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classvalidMoveTest_af883b5f90da3b98bfb9eb7ba27b90d75}{testpawn\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_a4494f774965708934097b0b4056e6393}{testrook\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_af6f87203255a747144b6cb6eb27ee710}{testknight\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_adbacd4c4c2e9b955d050575572ec6652}{testbishop\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_a2b876b08b07af952bdf35e881200f33b}{testqueen\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_a60468ae7602d73dc2545067d127655f5}{test\-Empress\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_aefe481cbdb041b958c7550198c9f38c4}{test\-Princess\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_ac72b70d56bfbb64c2720b94aa4523d94}{test\-King\-Valid} ()
+\item 
+void \hyperlink{classvalidMoveTest_a743597e2c3a39f1430eca98e48d6ff86}{check\-Knight\-Guards} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+These are unit tests that test validity of moves. Mainly tests valid\-Move.\-java. Tests each piece Checks if piece can eat another piece, spaces it can/can't move 
+
+\subsection{Member Function Documentation}
+\hypertarget{classvalidMoveTest_a743597e2c3a39f1430eca98e48d6ff86}{\index{valid\-Move\-Test@{valid\-Move\-Test}!check\-Knight\-Guards@{check\-Knight\-Guards}}
+\index{check\-Knight\-Guards@{check\-Knight\-Guards}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{check\-Knight\-Guards}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-check\-Knight\-Guards (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_a743597e2c3a39f1430eca98e48d6ff86}
+Checks to see if empress princess and knight can prevent enemy king from going to a certain tile. \hypertarget{classvalidMoveTest_adbacd4c4c2e9b955d050575572ec6652}{\index{valid\-Move\-Test@{valid\-Move\-Test}!testbishop\-Valid@{testbishop\-Valid}}
+\index{testbishop\-Valid@{testbishop\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{testbishop\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-testbishop\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_adbacd4c4c2e9b955d050575572ec6652}
+Tests validity of bishop. Checks spots bishop can move, can't move, and whether it can put king in check \hypertarget{classvalidMoveTest_a60468ae7602d73dc2545067d127655f5}{\index{valid\-Move\-Test@{valid\-Move\-Test}!test\-Empress\-Valid@{test\-Empress\-Valid}}
+\index{test\-Empress\-Valid@{test\-Empress\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{test\-Empress\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-test\-Empress\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_a60468ae7602d73dc2545067d127655f5}
+Test empress piece-\/ combo of knight and rook. Checks places empress can move and can't move \hypertarget{classvalidMoveTest_ac72b70d56bfbb64c2720b94aa4523d94}{\index{valid\-Move\-Test@{valid\-Move\-Test}!test\-King\-Valid@{test\-King\-Valid}}
+\index{test\-King\-Valid@{test\-King\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{test\-King\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-test\-King\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_ac72b70d56bfbb64c2720b94aa4523d94}
+Large test checking validity of king movements. Checks if king can move to not guarded spot, can't move to spots more than 1 block away. Checks places king can't move due to enemy piece guarding spot. \hypertarget{classvalidMoveTest_af6f87203255a747144b6cb6eb27ee710}{\index{valid\-Move\-Test@{valid\-Move\-Test}!testknight\-Valid@{testknight\-Valid}}
+\index{testknight\-Valid@{testknight\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{testknight\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-testknight\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_af6f87203255a747144b6cb6eb27ee710}
+Tests validity of knight. Checks spots knight can move, knights can't move, and whether knight can put a king in check \hypertarget{classvalidMoveTest_af883b5f90da3b98bfb9eb7ba27b90d75}{\index{valid\-Move\-Test@{valid\-Move\-Test}!testpawn\-Valid@{testpawn\-Valid}}
+\index{testpawn\-Valid@{testpawn\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{testpawn\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-testpawn\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_af883b5f90da3b98bfb9eb7ba27b90d75}
+Test that checks validity of pawn. Checks if it can take enemy piece, put king in check, move 1 square or move 2 squares the beginning \hypertarget{classvalidMoveTest_aefe481cbdb041b958c7550198c9f38c4}{\index{valid\-Move\-Test@{valid\-Move\-Test}!test\-Princess\-Valid@{test\-Princess\-Valid}}
+\index{test\-Princess\-Valid@{test\-Princess\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{test\-Princess\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-test\-Princess\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_aefe481cbdb041b958c7550198c9f38c4}
+Tests for Princess piece-\/ combo of knight and biship. Checks places princess can and can't move \hypertarget{classvalidMoveTest_a2b876b08b07af952bdf35e881200f33b}{\index{valid\-Move\-Test@{valid\-Move\-Test}!testqueen\-Valid@{testqueen\-Valid}}
+\index{testqueen\-Valid@{testqueen\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{testqueen\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-testqueen\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_a2b876b08b07af952bdf35e881200f33b}
+Tests validity of queen. Checks places queen can move, can't move, and checks if queen can put opponent king in check \hypertarget{classvalidMoveTest_a4494f774965708934097b0b4056e6393}{\index{valid\-Move\-Test@{valid\-Move\-Test}!testrook\-Valid@{testrook\-Valid}}
+\index{testrook\-Valid@{testrook\-Valid}!validMoveTest@{valid\-Move\-Test}}
+\subsubsection[{testrook\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}void valid\-Move\-Test.\-testrook\-Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classvalidMoveTest_a4494f774965708934097b0b4056e6393}
+Tests validity of rook. Checks spots rook can move, spots rook can't move, and whether a move will put enemy king in check 
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/valid\-Move\-Test.\-java\end{DoxyCompactItemize}

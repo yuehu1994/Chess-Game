@@ -1,0 +1,62 @@
+\hypertarget{classendGame}{\section{end\-Game Class Reference}
+\label{classendGame}\index{end\-Game@{end\-Game}}
+}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \hyperlink{classendGame_acd8fe8729e616b235cde06eafe0045b5}{stale\-Mate} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, String color)
+\item 
+static boolean \hyperlink{classendGame_a1d107d3405a89a4b62c6410c825e55d1}{check\-Mate} (\hyperlink{classpieces}{pieces}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, String color)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hypertarget{classvalidMoveTest_DESCRIPTION}{}\subsection{D\-E\-S\-C\-R\-I\-P\-T\-I\-O\-N}\label{classvalidMoveTest_DESCRIPTION}
+This class holds two functions. One to check if a player is in stale mate, and one to check if a player is in check mate. This class has two vectors. The vector check\-Tiles holds a vector of pieces that put the king in check. The must\-Go\-Tiles holds every location on the board that the opposing player can move one of their pieces to get out of check. These vectors are used to find if a player is in check mate 
+
+\subsection{Member Function Documentation}
+\hypertarget{classendGame_a1d107d3405a89a4b62c6410c825e55d1}{\index{end\-Game@{end\-Game}!check\-Mate@{check\-Mate}}
+\index{check\-Mate@{check\-Mate}!endGame@{end\-Game}}
+\subsubsection[{check\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game.\-check\-Mate (
+\begin{DoxyParamCaption}
+\item[{piecesboard}]{\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{String}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGame_a1d107d3405a89a4b62c6410c825e55d1}
+Function tests if in check\-Mate. Checks if the player has any way to get out of checkmate. Function determines if a player is able to make any valid moves Called only when king is in check
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board with all pieces set \\
+\hline
+{\em color} & The color of the person whose turn it is\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean that is true if the player is in check mate, false if not. 
+\end{DoxyReturn}
+\hypertarget{classendGame_acd8fe8729e616b235cde06eafe0045b5}{\index{end\-Game@{end\-Game}!stale\-Mate@{stale\-Mate}}
+\index{stale\-Mate@{stale\-Mate}!endGame@{end\-Game}}
+\subsubsection[{stale\-Mate}]{\setlength{\rightskip}{0pt plus 5cm}static boolean end\-Game.\-stale\-Mate (
+\begin{DoxyParamCaption}
+\item[{{\bf pieces}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}, }
+\item[{String}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{classendGame_acd8fe8729e616b235cde06eafe0045b5}
+This function checks to see if a player is in a stale mate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & The current board with all pieces set \\
+\hline
+{\em color} & The current color of the player whose turn it is\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean that is true if the player is in stale mate, false if not 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/end\-Game.\-java\end{DoxyCompactItemize}
